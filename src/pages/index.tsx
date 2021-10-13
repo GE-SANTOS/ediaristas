@@ -65,7 +65,8 @@ const Home: NextPage = () =>{
                   <UserInformation
                     key={index}
                     name={item.nome_completo}
-                    picture={item.foto_usuario}
+                    picture={ item.foto_usuario }
+                    //@ts-ignore
                     rating={item.reputacao}
                     description={item.cidade}
                   />
