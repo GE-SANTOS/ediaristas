@@ -44,12 +44,19 @@ public class DiaristaController {
     }
     
     @GetMapping("/{id}/editar")
-    public ModelAndView editar(@PathVariable Long id){
+    public ModelAndView editar(@PathVariable Long id) {
         var modelAndView = new ModelAndView("admin/diaristas/form");
 
         modelAndView.addObject("diarista", repository.getById(id));
 
         return modelAndView;
+    }
+
+    @PostMapping("/{id}/editar")
+    public String editar(@PathVariable Long id, Diarista diarista) {
+        repository.save(diarista);
+
+        return "redirect:/admin/diaristas";
     }
     @GetMapping("/{id}/excluir")
     public String excluir(@PathVariable Long id) {
