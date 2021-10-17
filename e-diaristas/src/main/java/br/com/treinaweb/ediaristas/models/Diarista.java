@@ -21,6 +21,7 @@ public class Diarista {
     
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
+@EqualsAndHashCode.Include
 private Long id;
 
 @Column(nullable = false, length = 100)
@@ -50,11 +51,11 @@ private String complemento;
 @Column(nullable = false, length = 8)
 private String cep;
 
-@Column(nullable = false, length = 2)
-private String estado;
-
 @Column(nullable = false)
 private String cidade;
+
+@Column(nullable = false, length = 2)
+private String estado;
 
 @Column(nullable = false)
 private String codigoIbge;
