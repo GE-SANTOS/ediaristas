@@ -95,5 +95,8 @@ private String estado;
 @NotEmpty
 @Column(nullable = false)
 private String codigoIbge;
+
+@Column(nullable = false)
+private String foto;
     
 }
