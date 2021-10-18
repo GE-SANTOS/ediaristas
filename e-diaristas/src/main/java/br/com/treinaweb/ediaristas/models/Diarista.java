@@ -47,8 +47,8 @@ private String cpf;
 private String email;
 
 @NotNull
-@Size(min = 11, max = 14)
-@Column(nullable = false, length = 14)
+@Size(min = 11, max = 15)
+@Column(nullable = false, length = 15)
 private String telefone;
 
 @NotNull
@@ -70,8 +70,8 @@ private String bairro;
 private String complemento;
 
 @NotNull
-@Size(min = 8, max = 9)
-@Column(nullable = false, length = 9)
+@Size(min = 8, max = 10)
+@Column(nullable = false, length = 10)
 private String cep;
 
 @NotNull
