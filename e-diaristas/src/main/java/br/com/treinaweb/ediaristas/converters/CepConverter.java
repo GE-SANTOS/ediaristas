@@ -6,7 +6,7 @@ public class CepConverter implements AttributeConverter<String, String>{
 
     @Override
     public String convertToDatabaseColumn(String cep) {
-        return cep.replaceAll("[.-]", "");
+        return cep.replace("-", "");
     }
 
     @Override
